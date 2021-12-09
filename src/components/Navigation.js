@@ -15,8 +15,12 @@ const Navigation = () => {
           FakeCars.com
         </Typography>
         <ul className="nav-list">
-          <Link to="/about">About</Link>
-          <Link to="/">Home</Link>
+          <li className="nav-list-item">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="nav-list-item">
+            <Link to="/">Home</Link>
+          </li>
         </ul>
       </Toolbar>
     </AppBar>

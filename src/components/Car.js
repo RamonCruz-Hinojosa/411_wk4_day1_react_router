@@ -8,26 +8,21 @@ const Car = (props) => {
   let id = props.match.params.id - 1;
   console.log(cars[id].Name);
   return (
-    <div className="car-container">
-      <Container>
-        <Paper
-          sx={{
-            width: 1 / 2,
-          }}
-        >
-          <Chip label={cars[id].id} />
-          <Chip label={cars[id].Name} />
-          <Chip label={cars[id].Miles_per_Gallon} />
-          <Chip label={cars[id].Cylinders} />
-          <Chip label={cars[id].Displacement} />
-          <Chip label={cars[id].Horsepower} />
-          <Chip label={cars[id].Weight_in_lbs} />
-          <Chip label={cars[id].Acceleration} />
-          <Chip label={cars[id].Year} />
-          <Chip label={cars[id].Origin} />
-        </Paper>
-      </Container>
-    </div>
+    <Container className="car-container">
+      <Paper className="car-paper">
+        <h2 className="carName">{cars[id].Name}</h2>
+        <Chip label={"id: " + cars[id].id} />
+        <Chip label={"Name: " + cars[id].Name} />
+        <Chip label={"Miles_per_Gallon: " + cars[id].Miles_per_Gallon} />
+        <Chip label={"Cylinders: " + cars[id].Cylinders} />
+        <Chip label={"Displacement: " + cars[id].Displacement} />
+        <Chip label={"Horsepower: " + cars[id].Horsepower} />
+        <Chip label={"Weight_in_lbs: " + cars[id].Weight_in_lbs} />
+        <Chip label={"Acceleration: " + cars[id].Acceleration} />
+        <Chip label={"Year: " + cars[id].Year} />
+        <Chip label={"Origin: " + cars[id].Origin} />
+      </Paper>
+    </Container>
   );
 };
 
